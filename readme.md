@@ -1,6 +1,13 @@
 This gist replicates a bug in the way Stylus imports files. If you import two files with the same filename, but different path, Stylus will silently ignore the second import. The behaviour is the same for both `@require` and `@import`.
 
-Run `stylus main.styl`.
+
+```bash
+$ git clone https://github.com/joshhunt/stylus-import-bug.git
+$ cd stylus-import-bug
+$ stylus main.styl
+  compiled main.css
+$ cat main.css
+```
 
 **Expected:**
 ```stylus
